@@ -9,6 +9,7 @@ Before you write **any** documentation, ask yourself:
 - Who is going to read this?
   - A senior software developer familiar with event sourcing? A junior developer? An admin? A DevOps engineer? A business user?
   - Or a combination of those as mentioned above?
+  - **Suggestion: Write for a mid-level developer who has heard of, but is not overtly familiar with, event sourcing.** 
 - What do they already know (and not know)?
 - What are they trying to achieve with this feature?
 
@@ -18,18 +19,18 @@ Before you write **any** documentation, ask yourself:
 
 Different types of documentation serve different purposes:
 
-| Document Type      | Purpose                              | Example                                   |
-|--------------------|--------------------------------------|-------------------------------------------|
+| Document Type      | Purpose                                 | Example                                                    |
+|--------------------|-----------------------------------------|------------------------------------------------------------|
 | **Tutorial**       | Guide users through a task step-by-step | “Configure and use KurrentDB's Kafka sink connector”       |
-| **How-To Guide**   | Solve a specific problem             | “How to configure TLS on your cluster”    |
-| **Reference**      | List detailed info or specs          | “API schema for v2.1 endpoints”           |
-| **Conceptual Doc** | Explain *why* something works        | “Understanding event streams in KurrentDB”|
+| **How-To Guide**   | Solve a specific problem                | “How to create a shared cluster on Kurrent Cloud”          |
+| **Reference**      | List detailed info or specs             | “HTTP API schema for v25.0”                                |
+| **Conceptual Doc** | Explain *why* something works           | “Understanding event streams in KurrentDB”                 |
 
-> 🔧 Use the right tool for the job — not everything should be a reference doc!
+> Use the right tool for the job — not everything should be a reference doc.  
 
-## 🧱 Step 3: Use a Standard, Repeatable Structure
+## Step 3: Use a Standard, Repeatable Structure
 
-Stick to a predictable format that users can scan easily.
+Use a predictable format that users can scan quickly.
 
 For a **How-To Guide** or **Tutorial**, use this layout:
 
@@ -40,75 +41,66 @@ For a **How-To Guide** or **Tutorial**, use this layout:
    - Prerequisites
 3. **Steps**
    - Numbered, clearly written steps
-   - Screenshots or code blocks if applicable
+   - Screenshots or code blocks, if applicable
 4. **Next Steps or Related Links**
 
-## ✍️ Step 4: Write With the User in Mind
+## Step 4: Write With the User in Mind
 
-Engineers tend to skip steps or assume knowledge. Instead:
+Do not assume knowledge. Instead:
 
 - **Explain acronyms** the first time they appear
 - Avoid insider jargon or internal terms
 - Don’t assume users know the system architecture
 - Use **second person ("you")** and active voice
 
-> 🔁 Bad: “The config file is modified.”  
-> ✅ Better: “You’ll need to modify the config file to include…”
+> Bad: “The config file is modified.”  
+> Better: “You’ll need to modify the config file to include…”
 
-## 📷 Step 5: Use Visuals, Examples, and Code Wisely
+## Step 5: Use Visuals, Examples, and Code Wisely
 
-- **Show, don’t just tell** — Use screenshots or diagrams where it clarifies
+- **Show, don’t just tell** — Use screenshots or diagrams where it clarifies a concept or feature
 - **Provide real, tested examples** of code, CLI usage, config snippets
 - Label important lines in code comments
 
-> 🧩 Example:
+> Example:
 > ```bash
 > # Start the KurrentDB cluster in dev mode
 > kurrent start --dev
 > ```
 
-## ✏️ Step 6: Be Explicit About Requirements and Outcomes
+## Step 6: Be Explicit About Requirements and Outcomes
 
 - Tell users what *exactly* they need before they begin (access rights, software version, etc.)
-- Tell users what should happen at the end (“You should now see a green check mark…”)
+- Tell users what should happen at the end (“You should now see the following message: ...”)
 
-> ✅ Clear outcomes help users know if they’re on track.
+> Clear outcomes help users know if they’re on track.
 
-## 🧪 Step 7: Test the Docs Like Code
+## Step 7: Test the Docs Like Code
 
 - Run through the process exactly as written
-- Ask a teammate *not* involved with the feature to follow the guide
+- Ask a teammate *not* involved with the feature to follow the docs
 - Watch for places where they get stuck or confused
 
-> 🎯 Tip: If it breaks when followed exactly, your doc isn’t done.
+> Tip: If your tester doesn't feel they understand the process when the docs are followed precisely, the doc isn’t done.
 
-## 🔁 Step 8: Maintain Like a Product
+## Step 8: Maintain Like a Product
 
 Documentation isn’t one-and-done. Build habits:
 
 - Update docs when code changes
-- Link to versioned content where possible
-- Add a “last updated” timestamp
+- Link to versioned content where appropriate
 - Accept and encourage feedback from users
 
-## 🔐 Bonus: Internal vs. External Mindset Shift
-
-| Engineer Mindset                            | Documentation Mindset                        |
-|---------------------------------------------|----------------------------------------------|
-| "This is how we built it."                  | "This is how you use it."                    |
-| "The system assumes XYZ…"                   | "You don’t need to understand the internals."|
-| "Just read the code/config."                | "Here’s what to do, in plain English."       |
-
-## ✨ Pro Writing Tips
+## Writing Tips
 
 - Write short, clear sentences.
 - Use bullet points and whitespace generously.
 - Use consistent terminology throughout.
 - Avoid future-facing language ("This will eventually support...")
 
-## ✅ Checklist for Engineer-Written Docs
+## ✅ Checklist for Docs
 
-- [ ] Do I clearly explain what this document is for?
+- [ ] Have I clearly explained what this document is for?
 - [ ] Have I defined all technical terms or acronyms?
 - [ ] Did I walk through steps **without assuming** prior system knowledge?
 - [ ] Did I test the process as described?
