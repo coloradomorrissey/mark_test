@@ -1,0 +1,115 @@
+# Documentation Writing Tips
+
+> **Goal**: Documentation that is clear, useful, and tailored to the needs of end users.
+
+## Step 1: Understand Your Audience
+
+Before you write **any** documentation, ask yourself:
+
+- Who is going to read this?
+  - A senior software developer familiar with event sourcing? A junior developer? An admin? A DevOps engineer? A business user?
+  - Or a combination of those as mentioned above?
+- What do they already know (and not know)?
+- What are they trying to achieve with this feature?
+
+> Tip: Write *for the least experienced competent user* — someone who knows the basics but is new to **this** product or feature.
+
+## Step 2: Choose the Right Document Type
+
+Different types of documentation serve different purposes:
+
+| Document Type      | Purpose                              | Example                                   |
+|--------------------|--------------------------------------|-------------------------------------------|
+| **Tutorial**       | Guide users through a task step-by-step | “Configure and use KurrentDB's Kafka sink connector”       |
+| **How-To Guide**   | Solve a specific problem             | “How to configure TLS on your cluster”    |
+| **Reference**      | List detailed info or specs          | “API schema for v2.1 endpoints”           |
+| **Conceptual Doc** | Explain *why* something works        | “Understanding event streams in KurrentDB”|
+
+> 🔧 Use the right tool for the job — not everything should be a reference doc!
+
+## 🧱 Step 3: Use a Standard, Repeatable Structure
+
+Stick to a predictable format that users can scan easily.
+
+For a **How-To Guide** or **Tutorial**, use this layout:
+
+1. **Title** (clear, action-oriented)
+2. **Introduction**
+   - What this guide does
+   - When or why you’d use it
+   - Prerequisites
+3. **Steps**
+   - Numbered, clearly written steps
+   - Screenshots or code blocks if applicable
+4. **Next Steps or Related Links**
+
+## ✍️ Step 4: Write With the User in Mind
+
+Engineers tend to skip steps or assume knowledge. Instead:
+
+- **Explain acronyms** the first time they appear
+- Avoid insider jargon or internal terms
+- Don’t assume users know the system architecture
+- Use **second person ("you")** and active voice
+
+> 🔁 Bad: “The config file is modified.”  
+> ✅ Better: “You’ll need to modify the config file to include…”
+
+## 📷 Step 5: Use Visuals, Examples, and Code Wisely
+
+- **Show, don’t just tell** — Use screenshots or diagrams where it clarifies
+- **Provide real, tested examples** of code, CLI usage, config snippets
+- Label important lines in code comments
+
+> 🧩 Example:
+> ```bash
+> # Start the KurrentDB cluster in dev mode
+> kurrent start --dev
+> ```
+
+## ✏️ Step 6: Be Explicit About Requirements and Outcomes
+
+- Tell users what *exactly* they need before they begin (access rights, software version, etc.)
+- Tell users what should happen at the end (“You should now see a green check mark…”)
+
+> ✅ Clear outcomes help users know if they’re on track.
+
+## 🧪 Step 7: Test the Docs Like Code
+
+- Run through the process exactly as written
+- Ask a teammate *not* involved with the feature to follow the guide
+- Watch for places where they get stuck or confused
+
+> 🎯 Tip: If it breaks when followed exactly, your doc isn’t done.
+
+## 🔁 Step 8: Maintain Like a Product
+
+Documentation isn’t one-and-done. Build habits:
+
+- Update docs when code changes
+- Link to versioned content where possible
+- Add a “last updated” timestamp
+- Accept and encourage feedback from users
+
+## 🔐 Bonus: Internal vs. External Mindset Shift
+
+| Engineer Mindset                            | Documentation Mindset                        |
+|---------------------------------------------|----------------------------------------------|
+| "This is how we built it."                  | "This is how you use it."                    |
+| "The system assumes XYZ…"                   | "You don’t need to understand the internals."|
+| "Just read the code/config."                | "Here’s what to do, in plain English."       |
+
+## ✨ Pro Writing Tips
+
+- Write short, clear sentences.
+- Use bullet points and whitespace generously.
+- Use consistent terminology throughout.
+- Avoid future-facing language ("This will eventually support...")
+
+## ✅ Checklist for Engineer-Written Docs
+
+- [ ] Do I clearly explain what this document is for?
+- [ ] Have I defined all technical terms or acronyms?
+- [ ] Did I walk through steps **without assuming** prior system knowledge?
+- [ ] Did I test the process as described?
+- [ ] Is the guide helpful to a user who didn’t write the code?
